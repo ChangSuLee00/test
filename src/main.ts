@@ -23,6 +23,8 @@ async function bootstrap() {
   app.enableCors({
     origin: true,
     credentials: true,
+    allowedHeaders: 'Content-Type, Accept',
+    methods: 'GET, POST, PUT, DELETE, OPTIONS',
   });
   app.useGlobalFilters(new AllExceptionFiller(winstonLogger));
   app.useGlobalPipes(new ValidationPipe());

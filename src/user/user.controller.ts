@@ -72,7 +72,6 @@ export class UserController {
     res
       .cookie('access_token', access_token)
       .redirect(`${process.env.REDIRECT_FRONT}`)
-      .end();
   }
 
   @Get('github')
@@ -88,6 +87,5 @@ export class UserController {
     res
       .cookie('access_token', access_token)
       .redirect(`${process.env.REDIRECT_FRONT}`)
-      .end();
   }
 }
